@@ -1,0 +1,7 @@
+work/
+transcript
+*.wlf
+*.vcd
+*.vvp
+*.jou
+*.log
