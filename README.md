@@ -2,7 +2,8 @@
 
 A synthesizable Verilog DDS core that generates a sampled sine wave from a programmable frequency tuning word. The design combines a 16-bit phase accumulator, a 32-entry sine lookup table, and a registered output stage. Changing the tuning word adjusts the output frequency without resetting the phase accumulator.
 
-![Full simulation run](docs/full_run.jpg)
+<img width="1499" height="812" alt="startup" src="https://github.com/user-attachments/assets/7f37d6c4-cb20-4bd7-bf25-cdebca9b2708" />
+
 
 *Tuning word 300 (about 229 kHz) for 5 us, then 2000 (about 1.53 MHz). The phase accumulator wraps faster and the sine speeds up with no jump in level.*
 
