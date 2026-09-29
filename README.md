@@ -2,7 +2,8 @@
 
 A synthesizable Verilog DDS core that generates a sampled sine wave from a programmable frequency tuning word. The design combines a 16-bit phase accumulator, a 32-entry sine lookup table, and a registered output stage. Changing the tuning word adjusts the output frequency without resetting the phase accumulator.
 
-<img width="1499" height="812" alt="startup" src="https://github.com/user-attachments/assets/7f37d6c4-cb20-4bd7-bf25-cdebca9b2708" />
+<img width="1503" height="812" alt="full_run" src="https://github.com/user-attachments/assets/610efb54-51c6-4f0b-8187-593fa040cdff" />
+
 
 
 *Tuning word 300 (about 229 kHz) for 5 us, then 2000 (about 1.53 MHz). The phase accumulator wraps faster and the sine speeds up with no jump in level.*
@@ -47,13 +48,13 @@ The results below come from this run. The testbench is a visual check of the wav
 
 Reset releases at 20 ns, the phase accumulator begins stepping by the tuning word, and the output goes from unknown to mid-scale (`0x80`) on the first clock edge.
 
-![Start-up](docs/startup.jpg)
+<img width="1499" height="812" alt="startup" src="https://github.com/user-attachments/assets/4033033d-ef89-48b7-8767-1ac08921bd14" />
 
 ### Frequency change and phase continuity
 
 At 5.03 us the tuning word changes from 300 to 2000. The phase step per clock jumps accordingly, but the phase carries on from where it was and the sine continues without a discontinuity. Here the output also shows the one-clock lag behind the lookup table output.
 
-![Frequency change](docs/freq_change.jpg)
+<img width="1508" height="812" alt="freq_change" src="https://github.com/user-attachments/assets/a1686ad8-c731-4fd2-81e2-3898762cf821" />
 
 ## Running the simulation
 
